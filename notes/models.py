@@ -5,7 +5,7 @@ from django.utils import timezone
 class Note(models.Model):
   title = models.CharField(max_length=255, blank=False, null=False)
   body = models.TextField(help_text="Type a note, if you dare", blank=False, null=False)
-  created_at = models.DateTimeField(default = timezone.now())
+  created_at = models.DateTimeField(default = timezone.now)
   updated_at = models.DateTimeField(blank=True, null=True)
 
   def __str__(self):
