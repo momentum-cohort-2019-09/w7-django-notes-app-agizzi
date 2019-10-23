@@ -2,10 +2,11 @@
 
 {% block content %}
 <ul id="notes">
-  {% for id, note in notes.items %}
+  {% for note in notes %}
   <li>
-    <div id="list-{{ id }}"><a href="/notes/{{ id }}">{{ note.title }}</a></div>
+    <div id="list-{{ id }}"><a href="/notes/{{ note.id }}">{{ note.title }}</a></div>
   </li>
   {% endfor %}
 </ul>
-{% endblock %}
+
+<a href="{% url 'create_note' %}">Create new note</a> {% endblock %}

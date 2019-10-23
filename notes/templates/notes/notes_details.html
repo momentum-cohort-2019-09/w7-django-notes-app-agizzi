@@ -8,10 +8,6 @@
 {% block content %}
 <h3>{{ notes.title }}</h3>
 <ol>
-  {% for id, info in notes.items %}
-  <li>
-    {{info}}
-  </li>
-  {% endfor %}
+  {{note.body}}
 </ol>
 {% endblock %}
