@@ -12,6 +12,6 @@
     {{note.body}}
   </li>
 </ol>
-
-<!-- <p><a href="{% url 'edit_note' %}">Edit Note</a></p> -->
+<a href="{% url 'edit_note' pk=note.pk %}">Edit Note</a>
+<p><a href='/'>Go Home</a></p>
 {% endblock %}

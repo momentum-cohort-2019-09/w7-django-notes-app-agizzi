@@ -26,18 +26,18 @@ def create_note(request):
     return render(request, "notes/create_note.html", {"form": form})
 
 
-# def edit_note(request, pk):
-#     note = get_object_or_404(Note, pk=pk)
+def edit_note(request, pk):
+    note = get_object_or_404(Note, pk=pk)
 
-#     if request.method == "POST":
-#         form = NoteForm(instance=note, data=request.POST)
-#         if form.is_valid():
-#             note = form.save()
-#             return redirect(to=note)
-#     else:
-#         note = NoteForm(instance=note)
+    if request.method == "POST":
+        form = NoteForm(instance=note, data=request.POST)
+        if form.is_valid():
+            note = form.save()
+            return redirect(to='notes_details', pk=note.id)
+    else:
+        form = NoteForm(instance=note)
 
-#     return render(request, "notes/edit_note.html", {
-#         "note": note,
-#         "form": form,
-#     })
+    return render(request, "notes/edit_note.html", {
+        "note": note,
+        "form": form,
+    })

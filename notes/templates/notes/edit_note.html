@@ -1,6 +1,8 @@
-<!-- {% extends "notes/base.html" %}
+{% extends "notes/base.html" %}
 
 {% block content %}
+<h2>Edit "{{ note.title }}"</h2>
+
 <form action="" method="POST">
   {% csrf_token %}
   {{form.as_p}}
@@ -8,4 +10,4 @@
 </form>
 <p><a href='/'>Go Home</a></p>
 
-{% endblock %} -->
+{% endblock %}
