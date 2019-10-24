@@ -8,6 +8,10 @@
 {% block content %}
 <h3>{{ notes.title }}</h3>
 <ol>
-  {{note.body}}
+  <li>
+    {{note.body}}
+  </li>
 </ol>
+
+<!-- <p><a href="{% url 'edit_note' %}">Edit Note</a></p> -->
 {% endblock %}
