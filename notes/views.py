@@ -41,3 +41,11 @@ def edit_note(request, pk):
         "note": note,
         "form": form,
     })
+
+
+def delete_note(request, pk):
+    note = get_object_or_404(Note, pk=pk)
+
+    note.delete()
+    notes = Note.objects.all()
+    return render(request, 'notes/notes_list.html', {"notes": notes})
