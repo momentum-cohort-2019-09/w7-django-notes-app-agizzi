@@ -11,7 +11,7 @@ def notes_list(request):
 
 def note_details(request, pk):
     note = Note.objects.get(pk=pk)
-    return render(request, "notes/notes_details.html", {'notes': note})
+    return render(request, "notes/notes_details.html", {'note': note})
 
 
 def create_note(request):
