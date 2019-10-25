@@ -1,15 +1,17 @@
 {% extends "notes/base.html" %}
 
 {% block content %}
+<div class="navigation_bar">
+  <a href="{% url 'create_note' %}">create</a>
+  <a href="{% url 'search_notes' %}">search</a>
+  <a href="{% url 'sort_notes' %}">sort</a>
+</div>
 <ul id="notes">
   {% for note in notes %}
   <li>
-    <div id="note.id"><a href="/notes/{{ note.id }}">{{ note.title }}</a></div>
+    <div class="notes_list" id="note.id"><a href="/notes/{{ note.id }}">{{ note.title }}</a></div>
   </li>
   {% endfor %}
 </ul>
 
-<a href="{% url 'create_note' %}">Create new note</a>
-<a href="{% url 'search_notes' %}">Search Notes</a>
-<a href="{% url 'sort_notes' %}">Sort Notes</a>
 {% endblock %}
