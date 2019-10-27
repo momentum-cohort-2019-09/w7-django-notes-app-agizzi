@@ -5,9 +5,7 @@
 }
 
 .container {
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
+  display:flex;
 }
 
 .main_header {
@@ -26,10 +24,19 @@
 
 body {
   font-family: 'Karma', serif;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  
+}
+
+.page_title {
+  color: lightpink;
 }
 
 li {
   list-style: none;
+
 }
 
 a {
@@ -55,6 +62,10 @@ a {
 
 .navigation_bar a:hover {
   color: lightpink;
+}
+
+.date_list li {
+  color: darkgray;
 }
 
 

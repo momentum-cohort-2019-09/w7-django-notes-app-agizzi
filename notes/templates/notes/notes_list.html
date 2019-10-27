@@ -2,16 +2,35 @@
 
 {% block content %}
 <div class="navigation_bar">
+  <a href='/'>home</a>
   <a href="{% url 'create_note' %}">create</a>
   <a href="{% url 'search_notes' %}">search</a>
   <a href="{% url 'sort_notes' %}">sort</a>
 </div>
-<ul id="notes">
-  {% for note in notes %}
-  <li>
-    <div class="notes_list" id="note.id"><a href="/notes/{{ note.id }}">{{ note.title }}</a></div>
-  </li>
-  {% endfor %}
-</ul>
+<h2 class="home">home</h2>
+<div class="list_wrapper">
+  <div class="note_title_list">
+    <ul id="notes">
+      {% for note in notes %}
+      <li>
+        <div class="notes_list" id="note.id"><a href="/notes/{{ note.id }}">{{ note.title }}</a>
+        </div>
+      </li>
+      <div class="date_list">
+        {% if note.updated_at != None %}
+        <li>
+          updated on {{ note.updated_at }}
+        </li>
+        {% endif %}
+        {% if note.updated_at == None %}
+        <li>
+          created on {{ note.created_at }}
+        </li>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
 
 {% endblock %}
