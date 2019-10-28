@@ -6,13 +6,14 @@
 {% endblock %}
 
 {% block content %}
-<h3>{{ notes.title }}</h3>
+<h3>{{ note.title }}</h3>
+<a href="{% url 'edit_note' pk=note.pk %}" class="edit_delete">Edit</a>
+<a href="{% url 'delete_note' pk=note.pk %}" class="edit_delete">Delete</a>
 <ol>
   <li>
     {{note.body}}
   </li>
 </ol>
-<a href="{% url 'edit_note' pk=note.pk %}">Edit Note</a>
-<a href="{% url 'delete_note' pk=note.pk %}">Delete Note</a>
-<p><a href='/'>Go Home</a></p>
+
+
 {% endblock %}

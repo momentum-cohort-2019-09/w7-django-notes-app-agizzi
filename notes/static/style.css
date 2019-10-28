@@ -129,12 +129,23 @@ a {
   color: white;
   font-size: 16px;
   transition: all .4s ease;
-  box-shadow: 3px 3px 10px gray;
-
+  box-shadow: 3px 3px 10px gray
 
 }
 
+h3 {
+  color: palevioletred;
+  font-size: 20px;
+}
 
+.edit_delete {
+  color: darkgray;
+  font-size: 18px;
+  padding-left: 10px;
+}
 
-
+.edit_delete:hover {
+  text-decoration: underline;
+  font-size: 19px;
+}
 
