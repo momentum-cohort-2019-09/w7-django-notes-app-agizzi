@@ -9,7 +9,7 @@ class Note(models.Model):
                             blank=False,
                             null=False)
     created_at = models.DateTimeField(default=timezone.now)
-    updated_at = models.DateTimeField(auto_now=True)
+    updated_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return self.title

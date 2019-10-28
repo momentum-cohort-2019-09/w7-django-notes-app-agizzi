@@ -1,12 +1,6 @@
 {% extends "notes/base.html" %}
 
 {% block content %}
-<div class="navigation_bar">
-  <a href='/'>home</a>
-  <a href="{% url 'create_note' %}">create</a>
-  <a href="{% url 'search_notes' %}">search</a>
-  <a href="{% url 'sort_notes' %}">sort</a>
-</div>
 <h2>Edit "{{ note.title }}"</h2>
 
 <form action="" method="POST">

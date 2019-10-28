@@ -14,9 +14,18 @@
 </head>
 
 <body>
-  <div class=" container">
-    <h3 class="main_header">notes & shit</h3>
+  <div class="container">
+    <div class="top">
+      <img class="diamond" src={% static 'redDiamond.png' %}>
+      <h3 class="main_header">notes & shit</h3>
+    </div>
     <h4 class="slogan">honey, get your shit together.</h4>
+    <div class="navigation_bar">
+      <a href='/'>home</a>
+      <a href="{% url 'create_note' %}">create</a>
+      <a href="{% url 'search_notes' %}">search</a>
+      <a href="{% url 'sort_notes' %}">sort</a>
+    </div>
     {% block content %}
     {% endblock %}
   </div>

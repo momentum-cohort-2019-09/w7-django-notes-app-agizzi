@@ -1,17 +1,10 @@
 {% extends "notes/base.html" %}
 
 {% block content %}
-<div class="navigation_bar">
-  <a href='/'>home</a>
-  <a href="{% url 'create_note' %}">create</a>
-  <a href="{% url 'search_notes' %}">search</a>
-  <a href="{% url 'sort_notes' %}">sort</a>
-</div>
-<h2 class="page_title"> search </h2>
-<form method="POST">
+<form class="search_form" method="POST">
   {% csrf_token %}
   {{form.as_p}}
-  <input type='submit' value="search"></input>
+  <input class="search_button" type='submit' value="follow your dreams!"></input>
 </form>
 
 {% endblock %}

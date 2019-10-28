@@ -12,7 +12,7 @@ class NoteForm(forms.ModelForm):
 
 
 class SearchForm(forms.Form):
-    search_text = forms.CharField(label="Search Text", max_length=100)
+    search_text = forms.CharField(max_length=100, label="search")
 
 
 class SortForm(forms.Form):
